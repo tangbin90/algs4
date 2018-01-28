@@ -9,6 +9,7 @@ package com.itangbin.algs4;
 
 import edu.princeton.cs.algs4.Bag;
 import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.ST;
 
 /**
  * @author: TangBin 17082720 
@@ -20,7 +21,6 @@ import edu.princeton.cs.algs4.In;
 public class TangGraph {
     private final int V;
     private int E;
-
     private Bag<Integer>[] adj;
 
     public TangGraph(int V){
