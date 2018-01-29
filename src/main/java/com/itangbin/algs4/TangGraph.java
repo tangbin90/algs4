@@ -45,7 +45,7 @@ public class TangGraph {
         }
     }
 
-    private void addEdge(int v, int w){
+    public void addEdge(int v, int w){
         if(v>V||w>V)
             return;
         adj[v].add(w);
