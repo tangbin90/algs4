@@ -7,9 +7,7 @@
  */
 package com.itangbin.algs4;
 
-import edu.princeton.cs.algs4.Digraph;
-import edu.princeton.cs.algs4.Queue;
-import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.*;
 
 /**
  * @author: TangBin 17082720 
@@ -39,7 +37,7 @@ public class TangDepthFirstOrder {
         marked[v]=true;
 
         for(int m : G.adj(v)){
-            if(!marked[v]) dfs(G,m);
+            if(!marked[m]) dfs(G,m);
         }
         postOrder.enqueue(v);
         reverseOrder.push(v);
@@ -57,5 +55,11 @@ public class TangDepthFirstOrder {
         return reverseOrder;
     }
 
+    public static void main(String[] args) {
+        In in = new In("src/main/sources/tinyDG.txt");
+        Digraph dg = new Digraph(in);
+        DepthFirstOrder depthFirstOrder = new DepthFirstOrder(dg);
+        TangDepthFirstOrder tangDepthFirstOrder = new TangDepthFirstOrder(dg);
+    }
 
 }

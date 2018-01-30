@@ -22,10 +22,10 @@ public class TangTopological {
     }
 
     public boolean idDAG(){
-
+        return false;
     }
 
     Iterable<Integer> order(){
-
+        return null;
     }
 }
